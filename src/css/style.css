@@ -47,7 +47,7 @@ body {
 .free-cell__top {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin: 20px 0;
 }
 
 .free-cell__cells {
@@ -70,21 +70,32 @@ body {
 }
 
 .free-cell__tableau-piles {
+  position: relative;
   padding: 20px 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .free-cell__tableau-pile {
-  margin: 8px;
+  /* margin: 8px; */
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.card {
+  position: absolute;
+  width: auto;
+  height: auto;
+  border: none;
+  opacity: 0;
+  transition: all .3s linear;
 }
 
 img {
   width: 75px;
   height: 105px;
-  margin-bottom: -90px;
+  /* margin-bottom: -90px; */
   cursor: pointer;
   box-shadow: 2px 2px 14px #11463d31;
 }
