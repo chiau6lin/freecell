@@ -1,13 +1,14 @@
 (function (p) {
   function freeCellGame () {
     let shuffleDeckCards = []
+    let timer = null
 
     init()
 
     function init () {
       const poker = new Poker()
       deal(poker.shuffle())
-      // startTimer()
+      timer = startTimer()
     }
     
     function deal (deckCards) {
@@ -50,9 +51,7 @@
     function renderCards () {
       const decksContainer = document.getElementById('tableauPiles')
       shuffleDeckCards.forEach((deck, deckIndex) => {
-        console.log(deckIndex)
         const deckContainer = document.querySelectorAll('.free-cell__tableau-pile')[deckIndex]
-        console.log(deckContainer)
         deck.forEach((card, cardIndex) => {
           const cardEle = document.createElement('div')
           cardEle.classList.add('free-cell__cell', 'card')
@@ -62,7 +61,6 @@
           cardEle.innerHTML = `
             <img src='./src/assets/images/${card.suit}_${card.number}.png' />
           `
-
           setTimeout(() => {
             cardEle.style.top = cardIndex * 50 + 'px'
             cardEle.style.opacity = '1'
@@ -75,9 +73,22 @@
       })
     }
 
-    // function startTimer () {
-      
-    // }
+    function startTimer () {
+      let currentSec = 0
+      const minEle = document.getElementById('timeMin')
+      const secEle = document.getElementById('timeSec')
+      return (function () {
+        const timer = setInterval(() => {
+          currentSec++
+          const sec = (currentSec % 60)
+          const min = Math.floor(currentSec / 60)
+          secEle.innerText = sec < 10 ? `0${sec}` : sec
+          minEle.innerText = min < 10 ? `0${min}` : min
+        }, 1000)
+  
+        return timer
+      })()
+    }
   }
 
   freeCellGame()
