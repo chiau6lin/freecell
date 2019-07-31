@@ -13,16 +13,16 @@ const Card = (function() {
     let suitValue = 0;
 
     switch (this.suit) {
-      case 'Spades':
+      case 'spades':
         suitValue = 4
         break
-      case 'Hearts':
+      case 'hearts':
         suitValue = 3
         break
-      case 'Diamonds':
+      case 'diamonds':
         suitValue = 2
         break
-      case 'Clubs':
+      case 'clubs':
         suitValue = 1
         break
     }

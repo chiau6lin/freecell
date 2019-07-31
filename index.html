@@ -29,20 +29,25 @@
     <main class="main-container">
       <div class="free-cell__top">
         <div id="freeCell" class="free-cell__cells">
-          <div class="free-cell__cell" data-cell="1"></div>
-          <div class="free-cell__cell" data-cell="2"></div>
-          <div class="free-cell__cell" data-cell="3"></div>
-          <div class="free-cell__cell" data-cell="4"></div>
+          <div class="free-cell__cell" data-cell="0" data-dnd="drop" data-type="free"></div>
+          <div class="free-cell__cell" data-cell="1" data-dnd="drop" data-type="free"></div>
+          <div class="free-cell__cell" data-cell="2" data-dnd="drop" data-type="free"></div>
+          <div class="free-cell__cell" data-cell="3" data-dnd="drop" data-type="free"></div>
         </div>
         <div id="foundations" class="free-cell__foundations">
-          <div class="free-cell__cell" data-cell="1"></div>
-          <div class="free-cell__cell" data-cell="2"></div>
-          <div class="free-cell__cell" data-cell="3"></div>
-          <div class="free-cell__cell" data-cell="4"></div>
+          <div class="free-cell__cell" data-cell="0" data-dnd="drop" data-type="suited"></div>
+          <div class="free-cell__cell" data-cell="1" data-dnd="drop" data-type="suited"></div>
+          <div class="free-cell__cell" data-cell="2" data-dnd="drop" data-type="suited"></div>
+          <div class="free-cell__cell" data-cell="3" data-dnd="drop" data-type="suited"></div>
         </div>
       </div>
       <div id="tableauPiles" class="free-cell__tableau-piles">
-        <div class="free-cell__tableau-pile" data-tableau-pile="1">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="0"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
           <!-- <img src="images/poker/s01.png">
           <img src="images/poker/s02.png">
           <img src="images/poker/s03.png">
@@ -54,21 +59,57 @@
             <img src="images/poker/h02.png">
           </div> -->
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="2">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="1"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="3">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="2"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="4">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="3"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="5">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="4"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="6">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="5"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="7">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="6"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
-        <div class="free-cell__tableau-pile" data-tableau-pile="8">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="7"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
         </div>
       </div>
+      <div id="draggedBox" class="dragged-cards-box"></div>
       <div class="record time-record">
         <span id="timeMin" class="time-min">00</span>
         :
